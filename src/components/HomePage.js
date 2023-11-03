@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
-import a from "../assets/m1.png"
-import b from '../assets/m2.png'
+import a from "../assets/b1.png"
+import b from '../assets/b2.png'
 
 const HomePage = () => {
   return (

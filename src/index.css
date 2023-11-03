@@ -34,7 +34,7 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: var(--primary-font2);
+  font-family: var(--primary-font3);
   background:var(--clr-black);
   color: var(--clr-white);
   line-height: 1.5;
