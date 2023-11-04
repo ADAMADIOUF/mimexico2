@@ -44,7 +44,7 @@ const HomePage = () => {
                 atmosphere of Mi Mexico is a perfect to place relax. ​ Come in
                 an experience authentic Mexican Cuisine.
               </p>
-              <button className='btn-reserve'>reservation</button>
+              <button className='btn'>reservation</button>
             </article>
             <article className='home-about-img'>
               <div className='home-about-first-img'>

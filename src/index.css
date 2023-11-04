@@ -166,23 +166,29 @@ p {
 
 
 .btn {
-  margin: 0 auto;
-  background-color:var(--primary); 
-  color: var(--clr-white); 
-  padding: 1rem 2rem;
+  margin: 2rem auto;
+  padding: 2rem; 
+  border: 1px solid var(--clr-primary-1); 
+  border-right-color: transparent; /* Make the right border transparent */
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, filter 0.3s;
   font-size: 1rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
   letter-spacing: var(--spacing);
-text-transform: uppercase;
-  outline: none;
-  border: transparent;
- transition: filter 0.3s;  
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 6rem; 
+  height: 6rem; 
+  background-color: transparent; 
+  color: var(--clr-white); 
 }
-.btn:hover{
-     background-color:var(--primary-hover);
-      filter: brightness(0.9);
+
+.btn:hover {
+  background-color: var(--primary-hover); 
+  color: var(--clr-white); 
+  filter: brightness(0.9);
 }
 
 
@@ -222,6 +228,7 @@ text-transform: uppercase;
   font-size: 18px;
   transition: var(--transition);
   cursor: pointer;
+  text-transform: uppercase;
 }
 .nav-list  a:hover{
   border-bottom:  1px solid var(--primary-hover);
@@ -271,22 +278,6 @@ text-transform: uppercase;
 }
 .reservation-nav p{
   font-weight: 200;
-}
-.btn-reserve {
-  background-color: var(--clr-primary-1); 
-  color:var(--clr-white);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px; 
-  cursor: pointer;
-  transition: background-color 0.3s;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.btn-reserve:hover {
-  background-color: var(--primary-hover); 
 }
 
   @media (min-width:992px) {
@@ -531,9 +522,9 @@ font-size: 1.5rem;
 /* LastBanner */
 .last-banner {
   position: relative;
-  max-width: 1200px; /* Adjust based on your design */
+  max-width: 1200px; 
   margin: auto;
-  overflow: hidden; /* Ensures no overflow from absolute positioning */
+  overflow: hidden; 
 }
 
 .last-banner-row {
@@ -551,9 +542,9 @@ font-size: 1.5rem;
 .white-background {
   position: absolute;
   top: 0;
-  left: 40%; /* Adjust based on image width to align with the center */
-  width: 25%; /* White background takes up the middle 50% */
-  height: 100%; /* Height to cover both rows */
+  left: 40%; 
+  width: 25%; 
+  height: 100%; 
   color: var(--clr-black);
   background-color: white;
   padding: 20px;
@@ -571,13 +562,7 @@ font-size: 1.5rem;
   margin-bottom: 1em;
 }
 
-.cta-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+
 
 .spacer {
   flex-grow: 1;
@@ -637,4 +622,73 @@ font-size: 1.5rem;
   border-color: white;
 }
 
-/* Add responsive design as needed */
+/* OfferPages */
+.offer-pages {
+  position: relative;
+  background-image: url('./assets/offer1.png');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.offer-pages-content {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 45rem;
+}
+
+.offer-pages-content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0.5em;
+}
+
+.offer-pages-content h3{
+  text-transform: uppercase;
+}
+.pdf{
+  color: var(--clr-primary-1);
+  font-size: 2rem;
+}
+.offer-section p{
+  max-width: 45rem;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  font-weight: 200;
+}
+/* Ambience */
+.ambience-title h1{
+  font-size: 3rem;
+}
+.ambience-title p{
+  max-width: 30rem;
+}
+.ambience-container img{
+  width: 100%;
+  margin-top: 2rem;
+}
+@media (min-width:992px) {
+  .ambience-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem;
+  }
+}
+.last-offer{
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+}

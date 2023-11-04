@@ -7,12 +7,6 @@ import e from '../assets/l5.png'
 import f from '../assets/l6.png'
 import g from '../assets/l7.png'
 import h from '../assets/l8.png'
-
-
-
-
-
-
 const LastBanner = () => {
   return (
     <div className='last-banner'>
@@ -21,25 +15,25 @@ const LastBanner = () => {
         <p className='description'>
           Check out our latest deals and enjoy authentic flavors from Mi Mexico!
         </p>
-        <button className='cta-button'>Discover More</button>
-      </div>
-      {/* First Row */}
-      <div className='last-banner-row'>
-        <img src={a} alt='Image 1' className='image' />
-        <img src={b} alt='Image 2' className='image' />
-
-        <div className='spacer'></div>
-        <img src={c} alt='Image 3' className='image' />
-        <img src={d} alt='Image 4' className='image' />
+        <button className='learn-more'>Discover More</button>
       </div>
 
       <div className='last-banner-row'>
-        <img src={e} alt='Image 5' className='image' />
-        <img src={f} alt='Image 6' className='image' />
+        <img src={a} alt='' className='image' />
+        <img src={b} alt='' className='image' />
 
         <div className='spacer'></div>
-        <img src={g} alt='Image 7' className='image' />
-        <img src={h} alt='Image 8' className='image' />
+        <img src={c} alt='' className='image' />
+        <img src={d} alt='' className='image' />
+      </div>
+
+      <div className='last-banner-row'>
+        <img src={e} alt='' className='image' />
+        <img src={f} alt='' className='image' />
+
+        <div className='spacer'></div>
+        <img src={g} alt='' className='image' />
+        <img src={h} alt='' className='image' />
       </div>
     </div>
   )

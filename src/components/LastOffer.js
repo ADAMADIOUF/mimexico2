@@ -30,7 +30,7 @@ const slides = [
   },
 ]
 
-const SliderHome = () => {
+const LastO = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [progress, setProgress] = useState(0)
 
@@ -43,7 +43,7 @@ const SliderHome = () => {
         const diff = 100 / slides.length
         return Math.min(oldProgress + diff, 100)
       })
-    }, 3000) 
+    }, 3000)
 
     return () => {
       clearInterval(interval)
@@ -53,7 +53,7 @@ const SliderHome = () => {
   useEffect(() => {
     const progressInterval = setInterval(() => {
       setCurrentSlide((prevCurrent) => (prevCurrent + 1) % slides.length)
-    }, 4000) 
+    }, 4000)
 
     return () => {
       clearInterval(progressInterval)
@@ -72,16 +72,12 @@ const SliderHome = () => {
           <div
             className='slider-image'
             style={{ backgroundImage: `url(${slides[currentSlide].imageUrl})` }}
-          >
-           
-          </div>
+          ></div>
         </div>
-        <div className='progress-bar'>
-          <div className='progress' style={{ width: `${progress}%` }}></div>
-        </div>
+        
       </div>
     </div>
   )
 }
 
-export default SliderHome
+export default LastO
