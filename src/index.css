@@ -358,6 +358,7 @@ text-transform: uppercase;
   font-weight: 200;
 }
 /* HomePage */
+
 .home-page-mexico p{
 font-size: 1.5rem;
   max-width: 45rem;
@@ -414,3 +415,226 @@ font-size: 1.5rem;
   transform: translateX(90px) translateY(50px); 
 }
 }
+/* Offer */
+.offer{
+  position: relative;
+  margin-top: 25rem;
+}
+.offer p{
+  max-width: 45rem;
+  margin: 2rem auto;
+}
+/* SliderHome */
+.slider-home {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.slider-home-container {
+  display: flex;
+ flex-wrap: wrap;
+  height: 100%;
+}
+
+.slider-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.slider-text {
+  flex-basis: 50%;
+  padding: 20px;
+  color: white; /* Adjust text color as needed */
+}
+
+.slider-image {
+  flex-basis: 50%;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px; 
+  background-color: #ddd;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--clr-primary-1); 
+  transition: width 1s ease-in-out;
+}
+
+/* Events */
+.events {
+  text-align: center;
+ 
+}
+
+.events-title {
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top-row img {
+  width: calc(50% - 10px); 
+  margin: 5px;
+}
+
+.bottom-row {
+  flex-direction: row;
+}
+
+.bottom-row img {
+  width: calc(33.333% - 10px); 
+  margin: 5px;
+}
+
+.text-content {
+  flex-basis: 66.666%; 
+  padding: 0 20px;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.learn-more {
+  padding: 10px 20px;
+  background-color: var(--clr-primary-1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.underline {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, transparent, var(--clr-primary-1), transparent);
+  margin-bottom: 20px;
+}
+/* LastBanner */
+.last-banner {
+  position: relative;
+  max-width: 1200px; /* Adjust based on your design */
+  margin: auto;
+  overflow: hidden; /* Ensures no overflow from absolute positioning */
+}
+
+.last-banner-row {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.image {
+  width: 20%; /* Adjust width as needed */
+  margin: 0.5%; /* Provides spacing between images */
+}
+
+.white-background {
+  position: absolute;
+  top: 0;
+  left: 40%; /* Adjust based on image width to align with the center */
+  width: 25%; /* White background takes up the middle 50% */
+  height: 100%; /* Height to cover both rows */
+  color: var(--clr-black);
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+
+
+.description {
+  margin-bottom: 1em;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+/* Footer */
+.footer {
+  position: relative;
+  color: white;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.footer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  z-index: 2;
+}
+
+.footer-content h3 {
+  margin-top: 20px;
+}
+
+.footer-content p {
+  margin-bottom: 5px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.footer-nav a:hover {
+  border-color: white;
+}
+
+/* Add responsive design as needed */
