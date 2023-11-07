@@ -21,7 +21,9 @@ const handleItemClick = () => {
             <img src={logo} alt='' />
           </Link>
         </div>
-        <div className='reservations-nav'>Reseveations</div>
+        <div className='reservations-nav'>
+          <Link to={`/reservation`}>reservation</Link>
+        </div>
         <div className='phone-number'>
           <h3>+1 701-858-0777</h3>
         </div>

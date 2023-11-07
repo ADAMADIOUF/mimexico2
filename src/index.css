@@ -267,6 +267,10 @@ p {
   .phone-number{
     display: none;
   }
+  .reservations-nav a{
+    color: var(--clr-primary-1);
+    text-transform: uppercase;
+  }
   .menu-toggle-container{
     display: flex;
     justify-content: space-around;
@@ -314,29 +318,43 @@ p {
 /* Header */
 .header {
   position: relative;
-  background-image: url('./assets//h3.png');
-  background-size: cover;
-  background-position: center;
-  height:100vh;
+  height: 100vh;
   color: #fff;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; 
+}
+
+.header-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  
 }
 
 .overlay {
+  
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
 }
 
 .header-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  
 }
 
 .header-content h1 {
@@ -691,4 +709,294 @@ font-size: 1.5rem;
 .last-offer{
   background-color: var(--clr-white);
   color: var(--clr-black);
+}
+.img-ambience-right img{
+  width: 100%;
+}
+/* Gallery */
+.gallery-pages {
+  position: relative;
+  background-image: url('./assets/g1.png');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.gallery-pages-content {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 45rem;
+}
+
+.gallery-pages-content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0.5em;
+}
+/* ThirdBanner */
+.third-banner-img article {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.third-banner-img article:hover .image-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.third-banner-img article .image-overlay {
+  display: none;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.third-banner-img article .image-overlay h3 {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem; /* Adjust the size as needed */
+  padding: 1rem;
+}
+
+.third-banner-img img {
+  width: 100%;
+  display: block; /* This ensures that the image takes up the full space of the article */
+  transition: transform 0.3s ease;
+}
+
+.third-banner-img article:hover img {
+  transform: scale(1.05);
+}
+
+
+
+.third-banner-content h3{
+  font-family: var(--primary-font7);
+  font-size: 4rem;
+  color: var(--clr-primary-3);
+}
+.third-banner-content h2{
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+@media (min-width:768px) {
+  .third-banner-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    box-shadow: var(--light-shadow);
+    background-color: var(--clr-white);
+  }
+  .third-banner-img{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+  }
+  .third-banner-img{
+    flex: 1;
+   
+  }
+  .third-banner-content{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+     justify-content: center;
+  }
+}
+@media (min-width:992px) {
+  .third-banner-img{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+  }
+}
+.gallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.gallery img {
+  max-width: 80%;
+  max-height: 80%;
+  margin: 20px;
+}
+
+.gallery button {
+  background: none;
+  border: none;
+  color: var(--clr-primary-3);
+  font-size: 24px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.prev-btn {
+  
+  color: var(--clr-primary-3);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+}
+
+.icon-gallery{
+  color: var(--clr-primary-3);
+}
+.container-btn{
+  display: flex;
+  
+  justify-content: space-between;
+}
+/* AboutPages */
+.about-pages {
+  position: relative;
+  background-image: url('./assets/about.png');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.about-pages-content {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 45rem;
+}
+
+.about-pages-content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0.5em;
+}
+.about-pages-content p{
+  font-size: 2rem;
+}
+.about-content p{
+  font-size: 2rem;
+}
+.about-img img{
+  width: 100%;
+}
+@media (min-width:992px) {
+  .about-images-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem;
+  }
+}
+/* Contact */
+.contact-pages {
+  position: relative;
+  background-image: url('./assets/contact.png');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.contact-pages-content {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 45rem;
+}
+
+.contact-pages-content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0.5em;
+}
+.contact-pages-content p{
+  font-size: 2rem;
+}
+
+
+.form-contact input{
+  background-color: transparent;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-bottom: 1px solid var(--clr-white);
+  color: var(--clr-white);
+  text-align: center;
+  outline: none;
+  margin: 1rem;
+}
+.form-contact input::placeholder{
+  text-transform: uppercase;
+  color: var(--clr-white);
+}
+@media (min-width:768px) {
+  .contact-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem;
+  }
+}
+
+/* Reservation */
+.reservation-pages {
+  position: relative;
+  background-image: url('./assets/reservation.png');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.reservation-pages-content {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 45rem;
+}
+
+.reservation-pages-content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0.5em;
+}
+.reservation-pages-content p{
+  font-size: 2rem;
 }
